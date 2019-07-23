@@ -1,0 +1,113 @@
+.car-listing-section {
+  .car-block {
+    margin-bottom: 20px;
+    .car-block-top {
+      position: relative;
+      overflow: hidden;
+      .bagle-dealer {
+        width: 200px;
+        height: 33px;
+        line-height: 33px;
+        transform: rotate(-45deg);
+        position: absolute;
+        left: -67px;
+        top: 16px;
+        background: #fab637;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        p {
+          color: white;
+        }
+      }
+      .car-image {
+        img {
+          width: 100%;
+          height: 124px;
+          object-fit: cover;
+        }
+      }
+    }
+    .car-block-content {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      .car-meta-bottom {
+        .feature {
+          color: #888;
+          padding: 5px;
+          span {
+            text-transform: capitalize;
+            padding: 0 3px;
+            font-size: 13px;
+          }
+        }
+      }
+      .car-meta-top {
+        width: 100%;
+        padding: 10px 0 10px 10px;
+        border-bottom: 1px solid #d4d4d4;
+        position: relative;
+        overflow: hidden;
+        .car-name {
+          width: 60%;
+          color: #232628;
+          text-transform: uppercase;
+          font-size: 14px;
+          line-height: 18px;
+          font-weight: 700;
+          a {
+            text-decoration: none;
+            color: #232628;
+            &:hover {
+              color: #cc6119;
+            }
+          }
+        }
+        .car-price {
+          width: 75px;
+          height: 36px;
+          position: relative;
+          margin-left: 18px;
+          background-color: #6c98e1;
+          text-align: right;
+          span {
+            z-index: 1;
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+          &:hover {
+            &::after {
+              transform: skew(-20deg) scaleX(12);
+              opacity: 1;
+            }
+          }
+          &::after {
+            transition: all 400ms;
+            opacity: 0;
+            content: " ";
+            position: absolute;
+            background: orange;
+            transform: skew(-20deg);
+            display: inline-block;
+            width: 11%;
+            height: 100%;
+            left: 51%;
+          }
+          &::before {
+            content: " ";
+            position: absolute;
+            display: inline-block;
+            background: #6c98e1;
+            width: 20%;
+            height: 100%;
+            top: 0;
+            left: -9%;
+            transform: skew(-20deg);
+          }
+        }
+      }
+    }
+  }
+}

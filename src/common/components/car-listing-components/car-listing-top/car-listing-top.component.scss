@@ -1,0 +1,32 @@
+.car-listing-top {
+  background-color: #232628;
+  h1 {
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .tab {
+    .button {
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 5px;
+      padding: 0 40px;
+      line-height: 44px;
+      text-transform: uppercase;      
+      font-weight: 700;
+      color: #AAAAAA;
+      font-size: 15px;
+      background: #393C3E;
+      user-select: none;
+    }
+  }
+}
+.list-group{
+  display: inline-block !important;
+}
+.active{
+  color: #cc6119 !important;
+  background-color: #fff !important;
+}

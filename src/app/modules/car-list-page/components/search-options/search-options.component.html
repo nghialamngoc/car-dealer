@@ -1,0 +1,44 @@
+<div class="search-option mt-5">
+  <div class="search-header">
+    <img src="assets/images/icons/search.png" alt="" width="50px" class="pr-2">
+    <span>Search Options</span>
+  </div>
+  <div class="search-form mt-2">
+    <div class="form-group">
+      <label for="formControlCondition">Điều kiện</label>
+      <select class="form-control" id="formControlCondition" [(ngModel)]="selectedCondition" (change)="formChange()">        
+        <option value="0">Xe Mới</option>
+        <option value="1">Xe Cũ</option>        
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="formControlModel">Model</label>
+      <select class="form-control" id="formControlModel" [(ngModel)]="selectedModel" (change)="formChange()">        
+        <option *ngFor="let item of carModel" value={{item.value}}>{{item.display}}</option>                     
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="formControlFuel">Nhiên liệu</label>
+      <select class="form-control" id="formControlFuel" [(ngModel)]="selectedFuel" (change)="formChange()">        
+        <option value="0">All</option>
+        <option value="1">Xăng</option>
+        <option value="2">Dầu</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="formControlSeat">Chỗ ngồi</label>
+      <select class="form-control" id="formControlSeat" [(ngModel)]="selectedSeat" (change)="formChange()">        
+        <option *ngFor="let item of totalSeats" value={{item.value}}>{{item.display}}</option>              
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="formControlOrigin">Xuất xứ</label>
+      <select class="form-control" id="formControlOrigin" [(ngModel)]="selectedOrigin" (change)="formChange()">        
+        <option value="0">All</option>
+        <option value="1">Xe trong nước</option>
+        <option value="2">Xe nhập khẩu</option>        
+      </select>
+    </div>    
+    <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" (valueChange)="minChange($event)" (highValueChange)="maxChange($event)"></ng5-slider>
+  </div>
+</div>

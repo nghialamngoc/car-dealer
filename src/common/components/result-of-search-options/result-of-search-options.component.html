@@ -1,0 +1,64 @@
+<div class="result-of-search mt-5">
+  <div class="sort-header">
+    <span>SORT BY: </span>
+    <select class="" id="formControlFuel">
+      <option *ngFor="let item of sortCritiria" value={{item.value}}>{{item.display}}</option>
+    </select>
+  </div>
+  <hr>
+  <div class="results">
+    <div class="car-block row">
+      <div class="car-image col-md-4 col-8">
+        <img src="http://motors.stylemixthemes.com/wp-content/uploads/2015/12/122-300x189.jpg" alt="">
+      </div>
+      <div class="car-description col-md-8 col-12">
+        <div class="car-title d-flex">
+          <div class="car-name flex-grow-1">
+            <a href="">
+              BMW 535i, Navi, Leather, ABS
+            </a>
+          </div>
+          <div class="car-price d-flex justify-content-center align-items-center">
+            <div class="content d-flex justify-content-center align-items-center">
+              <span class="label">our price</span>
+              <span class="price">560 Tr</span>
+            </div>
+          </div>
+        </div>
+        <div class="car-content">
+          <div class="icons d-flex">
+            <div class="icon d-flex align-items-start">
+              <i class="fas fa-road"></i>
+              <div class="icon-des d-flex flex-column">
+                <p class="des-1">Mileage</p>
+                <p class="des-2">80</p>
+              </div>
+            </div>
+            <div class="icon d-flex align-items-start">
+              <i class="fas fa-gas-pump"></i>
+              <div class="icon-des d-flex flex-column">
+                <p class="des-1">Fuel Type</p>
+                <p class="des-2">Xăng</p>
+              </div>
+            </div>
+            <div class="icon d-flex align-items-start">
+                <i class="far fa-calendar-alt"></i>
+              <div class="icon-des d-flex flex-column">
+                <p class="des-1">Year</p>
+                <p class="des-2">2017</p>
+              </div>
+            </div>
+            <div class="icon d-flex align-items-start">
+              <i class="fab fa-whmcs"></i>
+              <div class="icon-des d-flex flex-column">
+                <p class="des-1">TRANSMISSION</p>
+                <p class="des-2">Tự động</p>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>

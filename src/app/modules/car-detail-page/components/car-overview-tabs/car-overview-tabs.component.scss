@@ -1,0 +1,120 @@
+.car-overview-tabs {
+  width: 100%;
+  .nav-tabs {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    background-color: #232628;
+    .nav-item {
+      .nav-link {
+        border: none;
+        border-radius: 0;
+        padding: 14px;
+        color: white;
+        &:hover {
+          padding: 14px;
+          border: none;
+        }
+      }
+    }
+  }
+  .tab-content {
+    .vehicle-overview {
+      padding: 5px 50px 10px 10px;
+      .overview {
+        font-size: 15px;
+        margin: 0 !important;
+
+        .sub {
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+      }
+      .extra-features-wapper {
+        margin-top: 20px;
+        .header {
+          text-transform: uppercase;
+          font-weight: 700;
+          color: #cc6119;
+        }
+        .extra-features {
+          font-size: 12px;
+          ul {
+            padding-left: 10px;
+            li {
+              list-style: none;
+              padding: 5px 0px;
+              i {
+                position: relative;
+                width: 15px;
+                height: 15px;
+                margin: 0 15px;
+                font-size: 8px;
+                border-radius: 50%;
+                color: white;
+                background: black;
+                &::before {
+                  position: absolute;
+                  top: 25%;
+                  left: 25%;
+                }
+              }
+              p {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .technical-tab {
+      .technical-block {
+        .sub-block {
+          .sub-block-header {
+            i {
+              width: 50px;
+              font-size: 29px;
+              color: #cc6119;
+              padding: 10px;
+            }
+            span {
+              font-size: 15px;
+              text-transform: uppercase;
+              font-weight: 600;
+              color: #232628;
+            }
+          }
+          .sub-block-content {
+            ul {
+              list-style: none;
+              padding: 5px 10px;
+              font-size: 13px;
+              color: #888;
+              li{
+                padding: 10px 0;
+                border-bottom: 1px solid #dedede;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 575px) {
+  .nav-tabs {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.active {
+  &.nav-link {
+    border-top: 3px solid #cc6119 !important;
+  }
+
+  border-radius: 0;
+  color: black !important;
+}

@@ -1,0 +1,130 @@
+.car-finanching-calculator {
+  .price-top {
+    color: white;
+    .p-top {
+      padding: 20px;
+      background: #6c98e1;
+      font-size: 23px;
+      font-weight: 700;
+    }
+    .p-bottom {
+      padding: 5px;
+      background: black;
+      font-size: 13px;
+    }
+  }
+  .common-technical {
+    padding: 30px 10px 20px;
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        padding: 10px;
+        border-bottom: 1px solid #e4e4e4;
+        .title {
+          padding-right: 45%;
+          text-transform: uppercase;
+          color: #888;
+          font-size: 12px;
+        }
+        .value {
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+  .financing-calculator {
+    border: 3px solid #e4e6ea;
+    .f-top {
+      padding: 20px 20px 20px;
+      i {
+        padding-right: 10px;
+        font-size: 35px;
+        color: #cc6119;
+      }
+      span {
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+    .form-cal {
+      padding: 0 15px;
+
+      .input-block {
+        padding: 5px 0px;
+        label {
+          display: block;
+          font-size: 13px;
+          color: #888;
+          span {
+            color: #cc6119;
+          }
+        }
+        input {
+          width: 100%;
+          background: #eceff3;
+          border: none;
+          padding: 5px 10px;
+          font-size: 14px;
+          margin-bottom: 15px;
+          &:focus {
+            outline: none;
+          }
+          &.per-half {
+            width: 100%;
+          }
+        }
+        select {
+          width: 100%;
+          font-size: 14px;
+          padding: 5px 10px;
+        }
+      }
+      button {
+        text-transform: uppercase;
+        color: #fff !important;
+        border-radius: 3px;
+        background-color: #6c98e1;
+        border: none;
+        outline: none;
+        text-align: center;
+        box-shadow: 0 2px 0 #567ab4;
+        padding: 13px 18px 11px;
+        font-size: 12px;
+      }
+    }
+    .cal-result {
+      margin-top: 25px;
+      margin-bottom: 30px;
+      position: relative;
+      width: 90%;
+      margin-left: 5%;
+      background-color: #6c98e1;
+      padding: 18px 24px 14px;
+      color: white;
+      .res-title {
+        font-size: 13px;        
+        margin-bottom: 3px;
+      }
+      .res-value {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+      &::before{
+        content: ' ';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        transform: rotate(45deg);
+        position: absolute;
+        top: -5%;
+        left: 7%;
+        background: #6c98e1;
+      }
+    }
+  }
+}

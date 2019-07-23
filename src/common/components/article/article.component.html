@@ -1,0 +1,32 @@
+<div class="container articles-section mt-5">
+  <div class="section-header-articles d-flex">
+    <div class="header-left flex-grow-1">
+      <h2>TIN TỨC MỚI NHẤT</h2>
+      <p>Đọc tin tức mới nhất</p>
+    </div>
+    <div class="header-right"></div>
+  </div>
+  <div class="articles mt-5" *ngFor="let article of articles; even as isEven; odd as isOdd">
+    <div class="article d-flex">
+      <div class="context flex-grow-1 p-5" [ngClass]="{'order-2': isOdd}">
+        <div class="article-title">
+          <a href=""><span>{{ article.articleTitle }}</span></a>
+          <p>BY: {{ article.createBy }}</p>
+        </div>
+        <div class="article-context">
+          {{ article.articleContent }}
+        </div>
+      </div>
+      <div class="article-image" [ngClass]="{'order-1': isOdd}">
+        <a href={{article.articleUrl}}><img src={{article.articleImageUrl}} alt="article-image"></a>
+        <div class="article-time" [ngStyle]="{'right': isEven ? '94.5%' : '-5.5%', 'top': '50px'}">
+          <div class="time-inner d-flex justify-content-center align-items-center flex-column">
+            <p>16</p>
+            <p>9</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>

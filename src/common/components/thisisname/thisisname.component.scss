@@ -1,0 +1,87 @@
+a {
+  text-decoration: none;
+  opacity: 0.9;
+  transition: all 200ms;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.block {
+  padding: 30px 20px;
+}
+
+.thisisname {  
+  height: 80vh;
+  background: url("http://motors.stylemixthemes.com/wp-content/uploads/2015/09/first-parallax-block.jpg?id=909");
+  background-size: cover;
+  background-attachment: fixed;
+  .container {
+    height: 100%;
+    .wapper {
+      height: 100%;
+      color: white;
+      .icon {
+        font-size: 70px;
+        color: black;
+        padding: 0 10px;
+      }
+      .content {
+        h6 {
+          text-transform: uppercase;
+          padding: 15px 0 5px 0;
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 28px;
+          color: black;
+        }
+        p {
+          font-size: 13px;
+          color: #ffffff;
+        }
+      }
+      .left {
+        margin-right: 10px;
+        background: #fab637;
+        @extend .block;
+      }
+      .right {
+        margin-left: 10px;
+        background: #ff4848;
+        @extend .block;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .block{
+    padding: 20px 10px;
+  }
+  .wapper {
+    display: flex;
+    flex-direction: column;
+    .icon {
+      font-size: 45px !important;      
+    }
+    .content {
+      h6 {        
+        padding: 10px 0 5px 0 !important;
+        font-weight: 700 !important;
+        font-size: 18px !important;
+        line-height: 20px !important;    
+      }
+      p {
+        font-size: 12px !important;        
+      }
+    }
+    .left {
+      margin-right: 0 !important;
+      margin-bottom: 5px;
+    }
+    .right {
+      margin-left: 0 !important;
+      margin-top: 5px;
+    }
+  }
+}

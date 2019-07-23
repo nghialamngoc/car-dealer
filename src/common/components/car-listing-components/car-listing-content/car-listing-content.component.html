@@ -1,0 +1,40 @@
+<div class="container-fluid mt-5">
+  <div class="container">
+    <div class="car-listing-section row">      
+      <div class="col-12 col-sm-6 col-lg-3 car-block" *ngFor="let car of carList">
+          <div class="car-block-top">
+            <div class="bagle-dealer" *ngIf="car.isSpecial"><p>SPECIAL</p></div>
+            <div class="car-image">
+              <a [routerLink]="['car-detail', car.id]">
+                <img src={{car.carImageUrl}} alt="car-image">
+              </a>            
+            </div>
+          </div>
+          <div class="car-block-content">
+            <div class="car-meta-top d-flex">
+              <div class="car-name">
+                <a [routerLink]="['car-detail', car.id]">{{car.carName}}</a> 
+              </div>
+              <div class="car-price flex-grow-1 d-flex justify-content-center align-items-center">
+                <span>{{car.carPrice}} {{car.carPrice.toLowerCase() === 'request' ? '' : 'tr'}}</span>
+              </div>
+            </div>
+            <div class="car-meta-bottom d-flex">
+              <div class="feature">
+                  <span>{{car.fuel}}L</span>  
+                  <i class="fas fa-gas-pump"></i>
+              </div>
+              <div class="feature">
+                  <span>{{car.kmUse}}</span> 
+                  <i class="fas fa-bacon"></i>
+              </div>
+              <div class="feature">
+                  <span>{{car.transmission}}</span> 
+                  <img src="assets/images/icons/transmision.png" alt="">
+              </div>          
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

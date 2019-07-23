@@ -1,0 +1,67 @@
+.row {
+  margin: 0;
+}
+
+.customer-reviews {
+  margin-top: 100px;
+  line-height: 27px;
+  .section-title {
+    p {
+      font-size: 25px;
+      font-weight: 600;
+    }
+  }
+  .card-top {
+    position: relative;
+    margin-bottom: 55px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    .customer-info {
+      width: 50%;      
+      position: absolute;
+      bottom: -30%;
+      left: 25%;
+      .customer-face {
+        border: 4px solid white;
+        border-radius: 50%;
+        img {
+          border: 1px solid gray;
+          border-radius: 50%;
+          width: 65px;
+          height: 65px;
+          object-fit: cover;
+        }
+      }
+      .customer-name {
+        padding-top: 8px;
+        line-height: 0px;
+        p {
+          font-size: 15px;
+          color: #db2d2e;
+          font-weight: bold;
+        }
+        i {
+          font-size: 10px;
+        }
+      }
+    }
+    .card-img-top {
+      width: 100%;      
+    }
+  }
+  .card-body {
+    text-align: center;
+    .card-text {
+      font-size: 13px;
+      color: #999999;
+      line-height: 19px;
+    }
+    i{
+      font-size: 20px;
+      &:hover{
+        color: #db2d2e;
+      }
+    }
+  }
+}

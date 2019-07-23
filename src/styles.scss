@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {font-family: 'Open Sans', sans-serif;}
+
+body{
+  background: #F5F5F5;
+}
+
+.ng5-slider-pointer{
+  transition: all linear 200ms !important;
+  width: 20px !important;
+  height: 20px !important;
+  top: -10px !important;
+  &::after{
+    top: 6px !important;
+    left: 6px !important;
+  }
+}
+
+.ng5-slider-active{  
+  outline: none !important;
+  &::after{
+    background: white !important;    
+  }  
+}
+
+.ng5-slider-span{
+  font-size: 14px !important;
+}

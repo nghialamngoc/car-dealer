@@ -1,0 +1,13 @@
+<div class="container-fluid car-listing-top">
+  <div class="container pt-5">
+    <h1 class="pb-3">
+      <span style="color: #FFFFFF">Chào mừng đến với </span>   
+      <span style="color: #CC6119">thế giới xe toyota</span>  
+    </h1>
+    <div class="tab list-group" role="tablist">
+      <div class="button active" data-toggle="tab" role="tab" (click)="onToggle(true)">Xe mới</div>
+      <div class="button" data-toggle="tab" role="tab" (click)="onToggle(false)">Xe cũ</div>     
+    </div>
+  </div>
+</div>
+<app-car-listing-content tabCarListNew={{tabCarListNew}}></app-car-listing-content>

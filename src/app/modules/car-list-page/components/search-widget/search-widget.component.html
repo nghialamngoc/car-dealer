@@ -1,0 +1,11 @@
+<div class="container search-widget">
+  <div class="row">
+    <div class="col-lg-3 col-12">  
+      <app-search-options (searchOptions)="onGetSearchOptions($event)"></app-search-options>
+    </div>
+    <div class="col-lg-9 col-12">    
+      <app-result-of-search-options [searchOptions]="searchOptions"></app-result-of-search-options>     
+    </div>
+  </div>
+</div>
+  

@@ -1,0 +1,63 @@
+<div class="result-of-search mt-5">   
+  <div class="sort-header">
+    <span>SORT BY: </span>
+    <select class="" id="formControlFuel" [(ngModel)]="selectedSortCritiria">
+      <option *ngFor="let item of sortCritiria" value={{item.value}}>{{item.display}}</option>
+    </select>
+  </div>
+  <hr>
+  <div class="results">
+    <div class="car-block row" *ngFor="let car of carList | sort : selectedSortCritiria">
+      <div class="car-image col-md-4 col-8">
+        <img src={{car.carImageUrl}} alt="">
+      </div>
+      <div class="car-description col-md-8 col-12">
+        <div class="car-title d-flex">
+          <div class="car-name flex-grow-1">
+            <a [routerLink]="['/car-detail', car.id]">
+              {{car.carName}}
+            </a>
+          </div>
+          <div class="car-price d-flex justify-content-center align-items-center">
+            <div class="content d-flex justify-content-center align-items-center">
+              <span class="label">our price</span>
+              <span class="price">{{car.carPrice}} {{car.carPrice.toLowerCase() === 'request' ? '' : 'Tr'}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="car-content">
+          <div class="icons d-flex">
+            <div class="icon d-flex align-items-start">
+              <i class="fas fa-road"></i>
+              <div class="icon-des d-flex flex-column">
+                <p class="des-1">Mileage</p>
+                <p class="des-2">{{car.kmUse}}</p>
+              </div>
+            </div>
+            <div class="icon d-flex align-items-start">
+              <i class="fas fa-gas-pump"></i>
+              <div class="icon-des d-flex flex-column">
+                <p class="des-1">Fuel Type</p>
+                <p class="des-2">{{ car.fuelType === '1' ? 'Xăng' : 'Dầu' | titlecase }}</p>
+              </div>
+            </div>
+            <div class="icon d-flex align-items-start">
+                <i class="far fa-calendar-alt"></i>
+              <div class="icon-des d-flex flex-column">
+                <p class="des-1">Year</p>
+                <p class="des-2">2017</p>
+              </div>
+            </div>
+            <div class="icon d-flex align-items-start">
+              <i class="fab fa-whmcs"></i>
+              <div class="icon-des d-flex flex-column">
+                <p class="des-1">TRANSMISSION</p>
+                <p class="des-2">{{ car.transmission | titlecase}}</p>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>

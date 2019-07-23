@@ -1,0 +1,62 @@
+<div class="car-overview-tabs">
+  <h2>Toggleable Tabs</h2>
+  <br>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#vehicleoverview">vehicle overview</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu1">Technical</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="vehicleoverview" class="vehicle-overview tab-pane active"><br>
+      <div class="overview">        
+        <p>{{overviewHeader}}
+        </p>
+        <div class="sub" *ngFor="let item of overviewSub">
+          <strong class="title">{{item.subTitle}}: </strong>
+          <span class="content">{{item.subContent}}</span>
+        </div>        
+      </div>
+      <div class="extra-features-wapper">
+        <p class="header">Tính năng nỗi bật</p>
+        <div class="row">
+          <div class="col-md-4 col-lg-3 extra-features" *ngFor="let groups of customerExtraFeatureData">
+            <ul>
+              <li class="d-flex justify-content-start align-items-center" *ngFor="let item of groups">
+                <i class="fas fa-check" [ngStyle]="{'background-color': item.isHave ? '#cc6119' : 'black'}"></i>
+                <p>{{item.display}}</p>
+              </li>              
+            </ul>
+          </div>          
+        </div>
+      </div>
+    </div>
+    <div id="menu1" class="technical-tab tab-pane fade"><br>
+      <div class="technical-block">
+        <div class="sub-block" *ngFor="let item of technicalHeader">
+          <div class="sub-block-header d-flex align-items-center"><i class={{item.iconClass}}></i><span>{{ item.text }}</span></div>
+          <div class="sub-block-content">
+            <ul>
+              <li *ngFor="let item of technicalData | filterTechnical : item.text">
+                <div class="what d-flex"> <span class="flex-grow-1">{{item.display}}</span><span>{{item.value}}</span> </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sub-block"></div>
+        <div class="sub-block"></div>
+      </div>
+    </div>
+    <div id="menu2" class="tab-pane fade"><br>
+      <app-contact></app-contact>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="nav-bar">
+  <div class="nav-bar-top">    
+    <div class="phone-contact">
+      <i class="fas fa-phone-alt"></i>
+      <span>0367765209</span>
+      -
+      <i class="far fa-envelope"></i>
+      <span>nghialamngocit@gmail.com</span>
+    </div>
+    <div class="fb-contact">
+      <a href="https://www.facebook.com/nghia.lam.186">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+      <a href="https://www.instagram.com/">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+  <div class="nav-bar-bottom d-flex">
+    <div class="logo">
+      <img src="http://autozone.templines.org/dealer/wp-content/uploads/2018/09/big-logo.png" alt="logo">
+    </div>
+    <div class="nav-items flex-grow-1 d-lg-flex justify-content-end align-items-center d-none">
+      <div>
+        <a routerLink="">
+          TRANG CHỦ
+        </a>
+      </div>
+      <div>
+        <a routerLink="carlist">
+          DANH SÁCH XE
+        </a>
+      </div>
+      <div>
+        <a href="#">TIN TỨC</a>
+      </div>
+      <div>
+        <a href="#">
+          LIÊN HỆ
+        </a>
+      </div>
+
+    </div>
+    <div class="toogle flex-grow-1 d-flex justify-content-end align-items-center d-lg-none">
+      <i [ngClass]="toggleClass" (click)="onToogle($event)"></i>
+    </div>
+  </div>
+
+</div>
+
+<div class="nav-items-block d-lg-none" [ngStyle]="{'display': isOpen ? 'block' : 'none'}">
+  <div class="nav-items-2 d-flex flex-column align-items-start">
+    <div>
+      <a [routerLink]="['index']">
+        TRANG CHỦ
+      </a>
+    </div>
+    <div>
+      <a [routerLink]="['carlist']">
+        DANH SÁCH XE
+      </a>
+    </div>
+    <div>
+      <a href="#">TIN TỨC</a>
+    </div>
+    <div>
+      <a href="#">
+        LIÊN HỆ
+      </a>
+    </div>
+
+  </div>
+</div>

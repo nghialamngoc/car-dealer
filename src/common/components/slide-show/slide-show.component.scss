@@ -1,0 +1,13 @@
+.slide-show{  
+  width: 100%;
+  overflow: hidden;
+  height: 80vh;  
+  .carousel-caption{
+    top: 30% !important;
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 5;
+  }
+}
+
+
